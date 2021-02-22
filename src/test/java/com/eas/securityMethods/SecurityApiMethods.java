@@ -24,22 +24,20 @@ public class SecurityApiMethods {
 	// ********** Authentication Token Generator ********** //
 	// **************************************************** //
 	public static String authToken;
-	
+	public static RequestSpecification rSpec;
 	public String authTokenGenerator() {
 		jsonReader jsonReaderObj = new jsonReader();
+		specBuilder specBuilderObj = new specBuilder();
+		JSONObject JsonObj = new JSONObject(jsonContent);
 		try {
 			jsonContent = jsonReaderObj.readJSONfile(credentialStore);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
-		JSONObject JsonObj = new JSONObject(jsonContent);		
-		specBuilder specBuilderObj = new specBuilder();
-		
-		rawResponse = (ValidatableResponse) given().spec(specBuilderObj.reqSpec).
-				body(JsonObj).when().post("ENDPOINT").
-				then().extract().response();
-		
+		}			
+		rSpec = specBuilderObj.requestSpecs();
+		// REPLACE THIS BY A POST FUNCTION //
+		rawResponse = given().spec(rSpec).body(JsonObj).when().post(specBuilderObj.LOGIN).then();
+		authToken = rawResponse.extract().jsonPath().getString("authToken");
 		return authToken;
 	}
 	

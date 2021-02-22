@@ -7,7 +7,7 @@ public class specBuilder {
 	// ****************** ENDPOINTS AND CONSTANTS ************************* //
 	// ******************************************************************** //
 	public static String KEY = "8e665bf2ef41412285b164af82710525";
-	
+	public static String LOGIN = "";
 	// ******************************************************************** //
 	
 	public static RequestSpecification reqSpec;
