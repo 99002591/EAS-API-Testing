@@ -123,6 +123,7 @@ public class ParameterizedApiRequests {
 	 */
 	public static ExtractableResponse<?> deleteAtPath(String path){
 		return ApiCallHelper.delete(path);
+	//Figure out how to call deleteBA, deleteIA etc with variables//
 	}
 	// ------------------------------------------------------ //
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
