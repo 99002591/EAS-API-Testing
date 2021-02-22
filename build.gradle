@@ -25,17 +25,25 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:28.0-jre'
     
-    // https://mvnrepository.com/artifact/org.json/json
-	compile group: 'org.json', name: 'json', version: '20180813'
-
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+     implementation group: 'org.testng', name: 'testng', version: '7.3.0'
     
-    //Use TestNG framework
-    compile group: 'org.testng', name: 'testng', version: '6.14.3'
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
     
-    //Use Rest-assured framework
-    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0' 
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+    
+    implementation group: 'org.assertj', name: 'assertj-core', version: '3.19.0'
+    
+    implementation group: 'org.json', name: 'json', version: '20201115'    
+    
+    implementation group: 'org.javatuples', name: 'javatuples', version: '1.2' 
+    
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.0'
+    
+    implementation group: 'org.testng', name: 'reportng', version: '1.2.2'
+    
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.8'
+	
+	implementation group: 'com.github.automatedowl', name: 'allure-environment-writer', version: '1.0.0'
 }
 
 test {
