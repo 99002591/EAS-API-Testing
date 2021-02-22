@@ -14,6 +14,13 @@ public class APIs {
 		public static final String DELETE_COMM_CHANNEL = "/api/devices/commChannels/";
 	}
 	
+	public static final class ApiEndpoints {
+		public static final String API_1_SECURITY = "";
+		public static final String API_2_SITE = "";
+		public static final String API_3_SITE = "";
+		public static final String API_4_SITE = "";
+	}
+	
 	public enum StatusCode {
 		Ok(200),
 		Created(201),
