@@ -1,5 +1,5 @@
 package com.eas.SecurityTests;
 
-public class api_2_Tests {
+public class SecurityApi_1_Test {
 
 }

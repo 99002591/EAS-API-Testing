@@ -1,5 +1,5 @@
 package com.eas.siteTests;
 
-public class api_1_Tests {
+public class SiteApi_1_Test {
 
 }
