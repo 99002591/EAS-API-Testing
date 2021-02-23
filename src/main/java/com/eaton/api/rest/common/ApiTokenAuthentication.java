@@ -3,11 +3,14 @@ package com.eaton.api.rest.common;
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.json.JSONObject;
 
-import com.eaton.api.framework.ValidUserLogin;
+import com.eaton.api.framework.APIs;
+import com.eaton.api.framework.ConfigFileReader;
+import com.eaton.api.framework.SecurityCredentialsStore;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
@@ -37,19 +40,22 @@ public class ApiTokenAuthentication {
 	private static String generateToken() {
 
 		JSONObject loginRequest = new JSONObject();
-
-		loginRequest.put("serviceAccountId", ValidUserLogin.getUserName());
-		loginRequest.put("secret", ValidUserLogin.getPassword());
+		loginRequest.put("serviceAccountId", SecurityCredentialsStore.getUserName());
+		loginRequest.put("secret", SecurityCredentialsStore.getPassword());
 		ValidatableResponse authTokenValue = null;
 		String authTokenValue_string = null;
-
-		baseURI = "https://eas-all-apim-eus-dev.azure-api.net";
-		authTokenValue = given().accept("application/json").contentType("application/json").header("Ocp-Apim-Subscription-Key", "8e665bf2ef41412285b164af82710525")
-				.body(loginRequest.toString()).when().post("/serviceAccount/token").then();
-		System.out.println("BODY DONE");
+		APIs APIObj = new APIs();
+		try {
+			ConfigFileReader configFileReader = new ConfigFileReader();
+			baseURI = configFileReader.getApplicationUrl();
+			authTokenValue = given().accept("application/json").contentType("application/json")
+					.header("Ocp-Apim-Subscription-Key", "8e665bf2ef41412285b164af82710525")
+					.body(loginRequest.toString()).when().post(APIObj.API_1_SECURITY).then();
+		} catch (Exception e) {
+			// left empty on purpose
+		}
 		authTokenValue_string = authTokenValue.extract().jsonPath().getString("Token");
 		tokenCache.put(AUTH_TOKEN_KEY, authTokenValue_string);
-		System.out.println("TOKEN DONE");
 		return authTokenValue_string;
 	}
 }

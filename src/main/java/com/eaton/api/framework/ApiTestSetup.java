@@ -27,9 +27,9 @@ public class ApiTestSetup {
 
 	public static void initialSetup() {
 		try {
-			//ConfigFileReader configFileReader = new ConfigFileReader();
+			ConfigFileReader configFileReader = new ConfigFileReader();
 
-			setBaseUrl("https://eas-all-apim-eus-dev.azure-api.net");
+			setBaseUrl(configFileReader.getApplicationUrl());
 
 			setFaker(new Faker());
 		} catch (Exception ex) {

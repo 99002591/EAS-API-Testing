@@ -10,7 +10,7 @@ import io.restassured.response.ExtractableResponse;
 import io.restassured.specification.RequestSpecification;
 
 public class ApiCallHelper {
-    public static final String AUTH_TOKEN = new ApiTokenAuthentication().getAuthToken();
+    public static final String AUTH_TOKEN = new ApiTokenAuthentication().getAuthToken();	
     public static final String INVALID_AUTH_TOKEN = "SomeRANdom12345AuthenticationToken";
     public static final String BLANK_AUTH_TOKEN = "";
     public static final String SUB_KEY = "8e665bf2ef41412285b164af82710525";

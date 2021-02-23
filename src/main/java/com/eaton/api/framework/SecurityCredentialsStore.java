@@ -1,8 +1,8 @@
 package com.eaton.api.framework;
 
-public class ValidUserLogin {
+public class SecurityCredentialsStore {
 
-    private ValidUserLogin() {
+    private SecurityCredentialsStore() {
     }
 
     private static final String AUTOMATION_USER = "a10cfc64-1b4c-4583-aa0e-ba94720ce82c";
