@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="1550" started-at="2021-02-23T14:46:04 IST" finished-at="2021-02-23T14:46:05 IST">
+  <suite name="Gradle suite" duration-ms="1566" started-at="2021-02-23T16:51:13 IST" finished-at="2021-02-23T16:51:15 IST">
     <groups>
     </groups>
-    <test name="Gradle test" duration-ms="1550" started-at="2021-02-23T14:46:04 IST" finished-at="2021-02-23T14:46:05 IST">
+    <test name="Gradle test" duration-ms="1566" started-at="2021-02-23T16:51:13 IST" finished-at="2021-02-23T16:51:15 IST">
       <class name="com.eaton.api.tests.v1.P1_SecurityTokenAPITests">
-        <test-method status="PASS" signature="successfullyLogin()[pri:0, instance:com.eaton.api.tests.v1.P1_SecurityTokenAPITests@14d1e387]" name="successfullyLogin" duration-ms="1459" started-at="2021-02-23T14:46:04 IST" description="Succesffully login to generate Authentication token" finished-at="2021-02-23T14:46:05 IST">
+        <test-method status="PASS" signature="successfullyLogin()[pri:0, instance:com.eaton.api.tests.v1.P1_SecurityTokenAPITests@70936e53]" name="successfullyLogin" duration-ms="1479" started-at="2021-02-23T16:51:13 IST" description="Succesffully login to generate Authentication token" finished-at="2021-02-23T16:51:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfullyLogin -->
