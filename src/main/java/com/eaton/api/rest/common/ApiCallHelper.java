@@ -18,7 +18,7 @@ public class ApiCallHelper {
     public static final String BLANK_SUB_KEY = "";
     
     public static String AuthTokenStore;
-    public static String genericJSONObj;
+    public static String genericJSONString;
     public static ApiPayloadBuilder PayloadObj = new ApiPayloadBuilder();
     // 1.******************************************************************************* //
     // ******************* API CALLS WITH CORRECT HEADER MANAGEMENT ******************** //
@@ -36,10 +36,10 @@ public class ApiCallHelper {
      * as it contains no Authentication token header
      */
     public static ExtractableResponse<?> postForLogin(String path){
-    	genericJSONObj = PayloadObj.credetials();
-    	System.out.println(genericJSONObj);
+    	genericJSONString = PayloadObj.credetials();
+    	System.out.println(genericJSONString);
     	AuthTokenStore = AUTH_TOKEN;
-    	return getHeaderForLogin().body(genericJSONObj).when().post(path).then().log().all().extract();
+    	return getHeaderForLogin().body(genericJSONString).when().post(path).then().log().all().extract();
     }
     /**
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
