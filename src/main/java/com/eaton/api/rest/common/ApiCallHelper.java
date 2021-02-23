@@ -2,6 +2,10 @@ package com.eaton.api.rest.common;
 
 import static io.restassured.RestAssured.given;
 
+import org.json.JSONObject;
+
+import com.eaton.api.builders.assets.commchannel.ApiPayloadBuilder;
+
 import io.restassured.response.ExtractableResponse;
 import io.restassured.specification.RequestSpecification;
 
@@ -13,19 +17,30 @@ public class ApiCallHelper {
     public static final String INVALID_SUB_KEY = "7e665bf2ef41412285b164af82767890";
     public static final String BLANK_SUB_KEY = "";
     
+    public static String AuthTokenStore;
+    public static String genericJSONObj;
+    public static ApiPayloadBuilder PayloadObj = new ApiPayloadBuilder();
     // 1.******************************************************************************* //
     // ******************* API CALLS WITH CORRECT HEADER MANAGEMENT ******************** //
     // ********************************************************************************* //
     
     /**
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP GET method for specified URI
-     * and request parameter.
-     * 
+     * and request parameter
      */
-    public static ExtractableResponse<?> get(String pathParam) {
-        return getHeader().get(pathParam).then().log().all().extract();
+    public static ExtractableResponse<?> get(String path) {
+        return getHeader().get(path).then().log().all().extract();
     }
-    
+    /**
+     * This POST method is only used for valid login
+     * as it contains no Authentication token header
+     */
+    public static ExtractableResponse<?> postForLogin(String path){
+    	genericJSONObj = PayloadObj.credetials();
+    	System.out.println(genericJSONObj);
+    	AuthTokenStore = AUTH_TOKEN;
+    	return getHeaderForLogin().body(genericJSONObj).when().post(path).then().log().all().extract();
+    }
     /**
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
@@ -430,6 +445,14 @@ public class ApiCallHelper {
     // ***************************************************************** //
     // ********************** HEADER MANAGEMENT ************************ //
     // ***************************************************************** //
+    /**
+     * Works as header management for the initial login only
+     * @return The entire header sequence for a REST call
+     */
+    private static RequestSpecification getHeaderForLogin() {
+        return given().accept("application/json").contentType("application/json").header("Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
+    }  
+    
     /**
      * Works as a <correct> alternative header managament unit.
      * @return The entire header sequence for a REST call

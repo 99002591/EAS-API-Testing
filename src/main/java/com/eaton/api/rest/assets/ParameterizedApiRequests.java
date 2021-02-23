@@ -34,8 +34,8 @@ public class ParameterizedApiRequests {
 	 * @param body : null (no body in this post request)
 	 * @return Extractable Api Response
 	 */
-	public static ExtractableResponse<?> postWithPathandNoBody(String path){
-		return ApiCallHelper.post(path, null);
+	public static ExtractableResponse<?> postToLogin(String path){
+		return ApiCallHelper.postForLogin(path);
 	}
 	// ------------------------------------------------------ //
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
