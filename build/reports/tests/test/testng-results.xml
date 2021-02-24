@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="1503" started-at="2021-02-23T17:02:20 IST" finished-at="2021-02-23T17:02:22 IST">
+  <suite name="Gradle suite" duration-ms="1666" started-at="2021-02-24T11:38:56 IST" finished-at="2021-02-24T11:38:58 IST">
     <groups>
     </groups>
-    <test name="Gradle test" duration-ms="1503" started-at="2021-02-23T17:02:20 IST" finished-at="2021-02-23T17:02:22 IST">
+    <test name="Gradle test" duration-ms="1666" started-at="2021-02-24T11:38:56 IST" finished-at="2021-02-24T11:38:58 IST">
       <class name="com.eaton.api.tests.v1.P1_SecurityTokenAPITests">
-        <test-method status="PASS" signature="successfullyLogin()[pri:0, instance:com.eaton.api.tests.v1.P1_SecurityTokenAPITests@9ab44be]" name="successfullyLogin" duration-ms="1415" started-at="2021-02-23T17:02:20 IST" description="Succesffully login to generate Authentication token" finished-at="2021-02-23T17:02:21 IST">
+        <test-method status="PASS" signature="successfullyLogin_BP()[pri:0, instance:com.eaton.api.tests.v1.P1_SecurityTokenAPITests@638d558b]" name="successfullyLogin_BP" duration-ms="1582" started-at="2021-02-24T11:38:56 IST" description="Successfully login to generate Authentication token with BUILDER PATTERN" finished-at="2021-02-24T11:38:58 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- successfullyLogin -->
+        </test-method> <!-- successfullyLogin_BP -->
       </class> <!-- com.eaton.api.tests.v1.P1_SecurityTokenAPITests -->
     </test> <!-- Gradle test -->
   </suite> <!-- Gradle suite -->

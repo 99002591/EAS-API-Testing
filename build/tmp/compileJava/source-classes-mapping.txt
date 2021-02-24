@@ -13,6 +13,9 @@ com/eaton/api/rest/common/ApiCallHelper.java
  com.eaton.api.rest.common.ApiCallHelper
 com/eaton/api/framework/ApiTestSetup.java
  com.eaton.api.framework.ApiTestSetup
+com/eaton/api/builders/assets/commchannel/RequestBodyBuilder.java
+ com.eaton.api.builders.assets.commchannel.RequestBodyBuilder
+ com.eaton.api.builders.assets.commchannel.RequestBodyBuilder$PayloadBuilder
 com/eaton/api/framework/TestConstants.java
  com.eaton.api.framework.TestConstants
  com.eaton.api.framework.TestConstants$Features

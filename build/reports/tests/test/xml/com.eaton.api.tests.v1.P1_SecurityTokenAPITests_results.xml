@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.415">
+           time="1.582">
     <properties></properties>
 
 
 
             <testcase
-                name="successfullyLogin"
-                time="1.415"
+                name="successfullyLogin_BP"
+                time="1.582"
                 classname="com.eaton.api.tests.v1.P1_SecurityTokenAPITests">
             </testcase>
 </testsuite>
