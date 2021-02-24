@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Gradle test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.966">
+    <properties></properties>
+
+
+
+            <testcase
+                name="api_P1_success"
+                time="1.966"
+                classname="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests">
+            </testcase>
+</testsuite>

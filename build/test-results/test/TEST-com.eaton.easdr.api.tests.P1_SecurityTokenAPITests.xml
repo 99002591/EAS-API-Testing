@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-24T12:33:53" hostname="MYTSP01807" time="1.966">
+  <properties/>
+  <testcase name="api_P1_success" classname="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests" time="1.966"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce82c",
+    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
+}
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Request-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+Set-Cookie: ARRAffinity=b2aee4c3020cf1dbb14301ec13400ee7d87b0702b13a208bdd28a5664695a9dc;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+Set-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+Date: Wed, 24 Feb 2021 12:33:55 GMT
+
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL2VhdG9uaW90YWRvcHRlcmFkYjJjLm9ubWljcm9zb2Z0LmNvbS9hZG9wdGVyd2ViYXBpc2VydmljZSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2IzY2ZkM2E1LTczMWItNDhlNy1hYTg1LTlhMGUwNTg3MDQ1My8iLCJpYXQiOjE2MTQxNjk3MzQsIm5iZiI6MTYxNDE2OTczNCwiZXhwIjoxNjE0MTczNjM0LCJhaW8iOiJFMlpnWUtneUZUcHkzK3YzNHlkcW43bWZUQy8zQndBPSIsImFwcGlkIjoiYTEwY2ZjNjQtMWI0Yy00NTgzLWFhMGUtYmE5NDcyMGNlODJjIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzLyIsInJoIjoiMC5BQUFBcGRQUHN4dHo1MGlxaFpvT0JZY0VVMlQ4REtGTUc0TkZxZzY2bEhJTTZDd1ZBQUEuIiwidGlkIjoiYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzIiwidXRpIjoiQzF2cExvaFkxa0M3T2JCMS1LRUlBQSIsInZlciI6IjEuMCJ9.CbND0x9eOiTwa2y73FmfDryggbmg80A1zE4-prhVRoog60lv6yxHw-mKo6bm1J_hzJY6VbZ1epGK-n8bBdRXxf8JCGJEQLl1Bkp2ioYJvWf2Xj_u1XxqTyGGs9rHNr7Q2-6TLlJQYh77123SOUpmMx6rbTfeMpwQ62ELqi3pDYy1XrIJTfyfoZXq7WefqEqB_a2uhSvXYL2Aez_A_FdxQfCnDR4YLhyLLZ4oLal1yImsKv6pcn-M_ZOiEgJnGQmK7Jiyli5EBeBNVMqHiEHPZVBTGFQ9Nd2vwzP9TYeGftuvCJO0Xl_M7k9V9WdCgmoi2zuJXuEbuY3OgAjceIYH7Q"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
