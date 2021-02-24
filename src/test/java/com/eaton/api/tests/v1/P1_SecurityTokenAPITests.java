@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.eaton.api.builders.assets.commchannel.RequestBodyBuilder;
 import com.eaton.api.framework.APIs;
+import com.eaton.api.framework.SecurityCredentialsStore;
 import com.eaton.api.rest.assets.ParameterizedApiRequests;
 import io.restassured.response.ExtractableResponse;
 
@@ -14,6 +15,7 @@ public class P1_SecurityTokenAPITests {
 	public static ParameterizedApiRequests ParamApiObj = new ParameterizedApiRequests();
 	public static APIs APIObj = new APIs();
 	public static ExtractableResponse<?> raw_response;
+	public static SecurityCredentialsStore secObj = new SecurityCredentialsStore();
 
 	// ***** //
 	public static final int ALL_OK_CODE = 200;
@@ -31,8 +33,8 @@ public class P1_SecurityTokenAPITests {
 	@SuppressWarnings("static-access")
 	@Test(description = "Successfully login to generate Authentication token with BUILDER PATTERN")
 	public static void successfullyLogin_BP() {
-		JSONObject setBody = new RequestBodyBuilder.PayloadBuilder().user("a10cfc64-1b4c-4583-aa0e-ba94720ce82c")
-				.password("IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF").build();
+		JSONObject setBody = new RequestBodyBuilder.PayloadBuilder().user(secObj.getUserName())
+				.password(secObj.getPassword()).build();
 		raw_response = ParamApiObj.postToLogin(APIObj.API_1_SECURITY, setBody.toString());
 		assertEquals(raw_response.statusCode(), ALL_OK_CODE);
 		assertEquals(raw_response.statusLine(), ALL_OK_LINE);
