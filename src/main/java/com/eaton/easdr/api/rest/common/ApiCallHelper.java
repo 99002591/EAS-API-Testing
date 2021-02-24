@@ -13,7 +13,7 @@ public class ApiCallHelper {
     public static final String BLANK_SUB_KEY = "";
     
     // 1.******************************************************************************* //
-    // ******************* API CALLS WITH CORRECT HEADER MANoAuthenticationGEMENT ******************** //
+    // ******************* API CALLS WITH CORRECT HEADER MANAGEMENT ******************** //
     // ********************************************************************************* //
     
     /**
