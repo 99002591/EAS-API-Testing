@@ -1,8 +1,8 @@
-com/eaton/api/tests/v1/P2_DevicesPerSiteAPITests.java
- com.eaton.api.tests.v1.P2_DevicesPerSiteAPITests
-com/eaton/api/tests/v1/P3_DeviceInfoAPITests.java
- com.eaton.api.tests.v1.P3_DeviceInfoAPITests
-com/eaton/api/tests/v1/P4_TimeSeriesAPITests.java
- com.eaton.api.tests.v1.P4_TimeSeriesAPITests
-com/eaton/api/tests/v1/P1_SecurityTokenAPITests.java
- com.eaton.api.tests.v1.P1_SecurityTokenAPITests
+com/eaton/easdr/api/tests/P3_DeviceInfoAPITests.java
+ com.eaton.easdr.api.tests.P3_DeviceInfoAPITests
+com/eaton/easdr/api/tests/P4_TimeSeriesAPITests.java
+ com.eaton.easdr.api.tests.P4_TimeSeriesAPITests
+com/eaton/easdr/api/tests/P1_SecurityTokenAPITests.java
+ com.eaton.easdr.api.tests.P1_SecurityTokenAPITests
+com/eaton/easdr/api/tests/P2_DevicesPerSiteAPITests.java
+ com.eaton.easdr.api.tests.P2_DevicesPerSiteAPITests
