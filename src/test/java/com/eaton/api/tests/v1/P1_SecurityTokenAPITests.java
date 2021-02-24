@@ -1,7 +1,6 @@
 package com.eaton.api.tests.v1;
 
 import static org.testng.Assert.assertEquals;
-
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
@@ -21,14 +20,6 @@ public class P1_SecurityTokenAPITests {
 	public static final int ALL_OK_CODE = 200;
 	public static final String ALL_OK_LINE = "HTTP/1.1 200 OK";
 	// ***** //
-
-//	@Test(description = "Succesfully login to generate Authentication token with JSON OBJECT BUILDER")
-//	public static void successfullyLogin_JO() {
-//		raw_response = ParamApiObj.postToLogin(APIObj.API_1_SECURITY);
-//		System.out.println(raw_response.body().asPrettyString());
-//		assertEquals(raw_response.statusCode(), ALL_OK_CODE);
-//		assertEquals(raw_response.statusLine(), ALL_OK_LINE);
-//	}
 
 	@SuppressWarnings("static-access")
 	@Test(description = "Successfully login to generate Authentication token with BUILDER PATTERN")

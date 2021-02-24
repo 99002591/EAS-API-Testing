@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="1666" started-at="2021-02-24T11:38:56 IST" finished-at="2021-02-24T11:38:58 IST">
+  <suite name="Gradle suite" duration-ms="1679" started-at="2021-02-24T12:26:49 IST" finished-at="2021-02-24T12:26:50 IST">
     <groups>
     </groups>
-    <test name="Gradle test" duration-ms="1666" started-at="2021-02-24T11:38:56 IST" finished-at="2021-02-24T11:38:58 IST">
+    <test name="Gradle test" duration-ms="1679" started-at="2021-02-24T12:26:49 IST" finished-at="2021-02-24T12:26:50 IST">
       <class name="com.eaton.api.tests.v1.P1_SecurityTokenAPITests">
-        <test-method status="PASS" signature="successfullyLogin_BP()[pri:0, instance:com.eaton.api.tests.v1.P1_SecurityTokenAPITests@638d558b]" name="successfullyLogin_BP" duration-ms="1582" started-at="2021-02-24T11:38:56 IST" description="Successfully login to generate Authentication token with BUILDER PATTERN" finished-at="2021-02-24T11:38:58 IST">
+        <test-method status="PASS" signature="successfullyLogin_BP()[pri:0, instance:com.eaton.api.tests.v1.P1_SecurityTokenAPITests@638d558b]" name="successfullyLogin_BP" duration-ms="1547" started-at="2021-02-24T12:26:49 IST" description="Successfully login to generate Authentication token with BUILDER PATTERN" finished-at="2021-02-24T12:26:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfullyLogin_BP -->
