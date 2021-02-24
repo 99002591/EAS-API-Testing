@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.eaton.api.builders.assets.commchannel.RequestBodyBuilder;
 import com.eaton.api.framework.APIs;
-import com.eaton.api.framework.SecurityCredentialsStore;
+import com.eaton.api.framework.SecurityAccountToken;
 import com.eaton.api.rest.assets.ParameterizedApiRequests;
 import io.restassured.response.ExtractableResponse;
 
@@ -14,7 +14,7 @@ public class P1_SecurityTokenAPITests {
 	public static ParameterizedApiRequests ParamApiObj = new ParameterizedApiRequests();
 	public static APIs APIObj = new APIs();
 	public static ExtractableResponse<?> raw_response;
-	public static SecurityCredentialsStore secObj = new SecurityCredentialsStore();
+	public static SecurityAccountToken secObj = new SecurityAccountToken();
 
 	// ***** //
 	public static final int ALL_OK_CODE = 200;

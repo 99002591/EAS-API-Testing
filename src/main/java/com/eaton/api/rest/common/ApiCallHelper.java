@@ -1,8 +1,6 @@
 package com.eaton.api.rest.common;
 
 import static io.restassured.RestAssured.given;
-import com.eaton.api.builders.assets.commchannel.ApiPayloadBuilder;
-
 import io.restassured.response.ExtractableResponse;
 import io.restassured.specification.RequestSpecification;
 
@@ -16,7 +14,6 @@ public class ApiCallHelper {
     
     public static String AuthTokenStore;
     public static String genericJSONString;
-    public static ApiPayloadBuilder PayloadObj = new ApiPayloadBuilder();
     // 1.******************************************************************************* //
     // ******************* API CALLS WITH CORRECT HEADER MANAGEMENT ******************** //
     // ********************************************************************************* //

@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 import com.eaton.api.framework.APIs;
 import com.eaton.api.framework.ConfigFileReader;
-import com.eaton.api.framework.SecurityCredentialsStore;
+import com.eaton.api.framework.SecurityAccountToken;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
@@ -38,8 +38,8 @@ public class ApiTokenAuthentication {
 	private static String generateToken() {
 
 		JSONObject loginRequest = new JSONObject();
-		loginRequest.put("serviceAccountId", SecurityCredentialsStore.getUserName());
-		loginRequest.put("secret", SecurityCredentialsStore.getPassword());
+		loginRequest.put("serviceAccountId", SecurityAccountToken.getUserName());
+		loginRequest.put("secret", SecurityAccountToken.getPassword());
 		ValidatableResponse authTokenValue = null;
 		String authTokenValue_string = null;
 		APIs APIObj = new APIs();
