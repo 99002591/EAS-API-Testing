@@ -25,7 +25,7 @@ public class ParameterizedApiRequests {
 	 * @param body : the payload for the API as JSON obj
 	 * @return Extractable Api Response
 	 */
-	public static ExtractableResponse<?> postWithPathAndBody(String path, JSONObject body){
+	public static ExtractableResponse<?> postWithPathAndBody(String path, String body){
 		return ApiCallHelper.post(path, body);
 	}
 	
@@ -34,8 +34,8 @@ public class ParameterizedApiRequests {
 	 * @param body : null (no body in this post request)
 	 * @return Extractable Api Response
 	 */
-	public static ExtractableResponse<?> postToLogin(String path){
-		return ApiCallHelper.postForLogin(path);
+	public static ExtractableResponse<?> postToLogin(String path, String body){
+		return ApiCallHelper.postForLogin(path, body);
 	}
 	// ------------------------------------------------------ //
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++ //

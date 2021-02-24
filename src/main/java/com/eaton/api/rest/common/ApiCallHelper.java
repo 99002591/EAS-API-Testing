@@ -35,17 +35,14 @@ public class ApiCallHelper {
      * This POST method is only used for valid login
      * as it contains no Authentication token header
      */
-    public static ExtractableResponse<?> postForLogin(String path){
-    	genericJSONString = PayloadObj.credetials();
-    	System.out.println(genericJSONString);
-    	AuthTokenStore = AUTH_TOKEN;
-    	return getHeaderForLogin().body(genericJSONString).when().post(path).then().log().all().extract();
+    public static ExtractableResponse<?> postForLogin(String path, String body){
+    	return getHeaderForLogin().body(body).when().post(path).then().log().all().extract();
     }
     /**
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> post(String pathParam, Object body) {
+    public static ExtractableResponse<?> post(String pathParam, String body) {
         return getHeader().body(body).when().post(pathParam).then().log().all().extract();
     }
     
