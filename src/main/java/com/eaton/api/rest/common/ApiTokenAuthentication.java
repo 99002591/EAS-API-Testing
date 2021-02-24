@@ -3,7 +3,6 @@ package com.eaton.api.rest.common;
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.json.JSONObject;
@@ -14,7 +13,6 @@ import com.eaton.api.framework.SecurityCredentialsStore;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
-import io.restassured.response.ExtractableResponse;
 import io.restassured.response.ValidatableResponse;
 
 public class ApiTokenAuthentication {
@@ -36,7 +34,7 @@ public class ApiTokenAuthentication {
 		return authToken;
 	}
 
-	// @SuppressWarnings("unchecked")
+	@SuppressWarnings("static-access")
 	private static String generateToken() {
 
 		JSONObject loginRequest = new JSONObject();

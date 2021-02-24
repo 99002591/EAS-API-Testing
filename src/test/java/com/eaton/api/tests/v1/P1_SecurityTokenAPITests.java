@@ -28,6 +28,7 @@ public class P1_SecurityTokenAPITests {
 //		assertEquals(raw_response.statusLine(), ALL_OK_LINE);
 //	}
 
+	@SuppressWarnings("static-access")
 	@Test(description = "Successfully login to generate Authentication token with BUILDER PATTERN")
 	public static void successfullyLogin_BP() {
 		JSONObject setBody = new RequestBodyBuilder.PayloadBuilder().user("a10cfc64-1b4c-4583-aa0e-ba94720ce82c")

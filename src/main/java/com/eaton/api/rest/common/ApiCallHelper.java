@@ -1,9 +1,6 @@
 package com.eaton.api.rest.common;
 
 import static io.restassured.RestAssured.given;
-
-import org.json.JSONObject;
-
 import com.eaton.api.builders.assets.commchannel.ApiPayloadBuilder;
 
 import io.restassured.response.ExtractableResponse;
