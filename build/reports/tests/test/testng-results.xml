@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="2097" started-at="2021-02-24T18:03:53 IST" finished-at="2021-02-24T18:03:55 IST">
+  <suite name="Gradle suite" duration-ms="2419" started-at="2021-02-25T14:11:03 IST" finished-at="2021-02-25T14:11:06 IST">
     <groups>
     </groups>
-    <test name="Gradle test" duration-ms="2097" started-at="2021-02-24T18:03:53 IST" finished-at="2021-02-24T18:03:55 IST">
+    <test name="Gradle test" duration-ms="2419" started-at="2021-02-25T14:11:03 IST" finished-at="2021-02-25T14:11:06 IST">
       <class name="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests">
-        <test-method status="PASS" signature="api_P1_success()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@1496dc95]" name="api_P1_success" duration-ms="1966" started-at="2021-02-24T18:03:53 IST" description="Successfully login to generate Authentication token" finished-at="2021-02-24T18:03:55 IST">
+        <test-method status="PASS" signature="api_P1_success()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@6f4433ba]" name="api_P1_success" duration-ms="2232" started-at="2021-02-25T14:11:03 IST" description="Successfully login to generate Authentication token" finished-at="2021-02-25T14:11:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- api_P1_success -->
