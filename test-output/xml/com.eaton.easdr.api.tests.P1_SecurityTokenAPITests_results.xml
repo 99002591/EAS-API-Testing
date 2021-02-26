@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.958">
+    <properties></properties>
+
+
+
+            <testcase
+                name="api_P1_invalidID"
+                time="6.715"
+                classname="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests">
+            </testcase>
+            <testcase
+                name="api_P1_invalidID"
+                time="1.243"
+                classname="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests">
+            </testcase>
+</testsuite>
