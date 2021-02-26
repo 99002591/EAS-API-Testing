@@ -187,6 +187,7 @@ public class ParameterizedApiRequests {
 	public static ExtractableResponse<?> apiHelper(String selector, String path) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Class<? extends ApiCallHelper> reflectObj = ApiHelpObj.getClass();
 		try {
+			System.out.println(selector);
 			Method methodCall = reflectObj.getDeclaredMethod(selector, String.class);
 			genericInvalidResponse = (ExtractableResponse<?>) methodCall.invoke(reflectObj, path);
 		} catch (NoSuchMethodException | SecurityException e) {
@@ -204,7 +205,7 @@ public class ParameterizedApiRequests {
 	public static ExtractableResponse<?> apiHelper(String selector, String path, String body) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Class<? extends ApiCallHelper> reflectObj = ApiHelpObj.getClass();
 		try {
-			Method methodCall = reflectObj.getDeclaredMethod(selector, String.class);
+			Method methodCall = reflectObj.getDeclaredMethod(selector);
 			genericInvalidResponse = (ExtractableResponse<?>) methodCall.invoke(reflectObj, path, body);
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
