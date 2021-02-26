@@ -55,6 +55,7 @@ public class P1_SecurityTokenAPITests {
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
 		assertEquals(response.statusLine(), BAD_REQUEST_LINE);
 		assertEquals(response.jsonPath().getString("Message"), "The ClientId field is required.");
+		assertThat(response.jsonPath().getList("InvalidParameters").contains("ClientId"));
 	}
 
 	@Test(description = "Invalid Secret")
@@ -77,6 +78,7 @@ public class P1_SecurityTokenAPITests {
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
 		assertEquals(response.statusLine(), BAD_REQUEST_LINE);
 		assertEquals(response.jsonPath().getString("Message"), "The secret field is required");
+		assertThat(response.jsonPath().getList("InvalidParameters").contains("ClientSecret"));
 	}
 
 	@Test(description = "Invalid Service account ID format")
@@ -88,5 +90,6 @@ public class P1_SecurityTokenAPITests {
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
 		assertEquals(response.statusLine(), BAD_REQUEST_LINE);
 		assertEquals(response.jsonPath().getString("Message"), "The field 'ClientId' is not a valid uuid.");
+		assertThat(response.jsonPath().getList("InvalidParameters").contains("ClientId"));
 	}
 }
