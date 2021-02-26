@@ -31,6 +31,6 @@ public class P1_SecurityTokenAPITests {
 				.setSecret(secObj.getSecret()).build();
 		response = ParamApiObj.postToLogin(APIObj.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.Ok.getValue());
-//		assertEquals(response.statusLine(), ALL_OK_LINE);
+		assertEquals(response.statusLine(), ALL_OK_LINE);
 	}
 }
