@@ -4,5 +4,7 @@ com/eaton/easdr/api/tests/P4_TimeSeriesAPITests.java
  com.eaton.easdr.api.tests.P4_TimeSeriesAPITests
 com/eaton/easdr/api/tests/P1_SecurityTokenAPITests.java
  com.eaton.easdr.api.tests.P1_SecurityTokenAPITests
+com/eaton/easdr/api/testData/DataProvider.java
+ com.eaton.easdr.api.testData.DataProvider
 com/eaton/easdr/api/tests/P2_DevicesPerSiteAPITests.java
  com.eaton.easdr.api.tests.P2_DevicesPerSiteAPITests

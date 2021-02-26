@@ -9,10 +9,17 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Gradle suite</th></tr>
-<tr><td><a href="#t0">Gradle test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2,259</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Gradle test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,717</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Gradle suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Gradle test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.eaton.easdr.api.tests.P1_SecurityTokenAPITests</td><td><a href="#m0">api_P1_success</a></td><td rowspan="1">1614256839376</td><td rowspan="1">2116</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Gradle suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Gradle test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.eaton.easdr.api.tests.P1_SecurityTokenAPITests</td><td><a href="#m0">api_P1_success</a></td><td rowspan="1">1614321608791</td><td rowspan="1">1599</td></tr></tbody>
 </table>
-<h2>Gradle test</h2><h3 id="m0">com.eaton.easdr.api.tests.P1_SecurityTokenAPITests#api_P1_success</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Gradle test</h2><h3 id="m0">com.eaton.easdr.api.tests.P1_SecurityTokenAPITests#api_P1_success</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [HTTP/1.1 20 OK] but found [HTTP/1.1 200 OK]
+	at com.eaton.easdr.api.tests.P1_SecurityTokenAPITests.api_P1_success(P1_SecurityTokenAPITests.java:34)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 54 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
