@@ -1,89 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="22519" started-at="2021-02-26T23:21:40 IST" finished-at="2021-02-26T23:22:02 IST">
+  <suite name="Gradle suite" duration-ms="11480" started-at="2021-02-28T14:28:51 IST" finished-at="2021-02-28T14:29:02 IST">
     <groups>
     </groups>
-    <test name="Gradle test" duration-ms="22519" started-at="2021-02-26T23:21:40 IST" finished-at="2021-02-26T23:22:02 IST">
+    <test name="Gradle test" duration-ms="11480" started-at="2021-02-28T14:28:51 IST" finished-at="2021-02-28T14:29:02 IST">
       <class name="com.eaton.easdr.api.tests.P1_SecurityTokenAPITests">
-        <test-method status="PASS" signature="api_P1_InvalidSecret()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_InvalidSecret" duration-ms="10020" started-at="2021-02-26T23:21:40 IST" description="Invalid Secret" finished-at="2021-02-26T23:21:50 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_InvalidSecret -->
-        <test-method status="PASS" signature="api_P1_blankID(java.lang.String, java.lang.String)[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_blankID" duration-ms="1989" started-at="2021-02-26T23:21:50 IST" description="Blank Service Account ID" data-provider="BlankSecurityAcctTokenData" finished-at="2021-02-26T23:21:52 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_blankID -->
-        <test-method status="PASS" signature="api_P1_blankID(java.lang.String, java.lang.String)[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_blankID" duration-ms="1738" started-at="2021-02-26T23:21:52 IST" description="Blank Service Account ID" data-provider="BlankSecurityAcctTokenData" finished-at="2021-02-26T23:21:53 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_blankID -->
-        <test-method status="PASS" signature="api_P1_blankSecret()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_blankSecret" duration-ms="1627" started-at="2021-02-26T23:21:53 IST" description="Blank Secret" finished-at="2021-02-26T23:21:55 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_blankSecret -->
-        <test-method status="PASS" signature="api_P1_invalidGUID()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_invalidGUID" duration-ms="1798" started-at="2021-02-26T23:21:55 IST" description="Invalid Service account ID format" finished-at="2021-02-26T23:21:57 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_invalidGUID -->
-        <test-method status="PASS" signature="api_P1_invalidID(java.lang.String, java.lang.String)[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_invalidID" duration-ms="1590" started-at="2021-02-26T23:21:57 IST" description="Invalid Service Account ID" data-provider="InvalidSecurityAcctTokenData" finished-at="2021-02-26T23:21:59 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[a10cfc64-1b4c-4583-aa0e-ba94720ce81E]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdGvG]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_invalidID -->
-        <test-method status="PASS" signature="api_P1_invalidID(java.lang.String, java.lang.String)[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_invalidID" duration-ms="1643" started-at="2021-02-26T23:21:59 IST" description="Invalid Service Account ID" data-provider="InvalidSecurityAcctTokenData" finished-at="2021-02-26T23:22:00 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[a10cfc64-1b4c-4583-aa0e-ba94720ce81E]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- api_P1_invalidID -->
-        <test-method status="PASS" signature="api_P1_success()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@69d7612c]" name="api_P1_success" duration-ms="1872" started-at="2021-02-26T23:22:00 IST" description="Successfully login to generate Authentication token" finished-at="2021-02-26T23:22:02 IST">
+        <test-method status="PASS" signature="api_P1_success()[pri:0, instance:com.eaton.easdr.api.tests.P1_SecurityTokenAPITests@40648062]" name="api_P1_success" duration-ms="11236" started-at="2021-02-28T14:28:51 IST" description="Successfully login to generate Authentication token" finished-at="2021-02-28T14:29:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- api_P1_success -->
