@@ -141,35 +141,30 @@ public class ParameterizedApiRequests {
 	
 	// getInvalidAuthentication : GET request with Invalid authentication key   //
 	// getBlankAuthentication : GET request with Blank authentication key       //
-	// getNoAuthentication : GET request with No authentication                 //
 	// getInvalidSubscription : GET request with Invalid subscription key       //
 	// getBlankSubscription : GET request with Blank subscription key           //
 	// getNoSubscription : GET request with No subscription key                 //
 	 
 	// postInvalidAuthentication : POST request with Invalid authentication key //
 	// postBlankAuthentication : POST request with Blank authentication key     //
-	// postNoAuthentication : POST request with No authentication               //
 	// postInvalidSubscription : POST request with Invalid subscription key     //
 	// postBlankSubscription : POST request with Blank subscription key         //
 	// postNoSubscription : POST request with No subscription key               //
 	
 	// deleteInvalidAuthentication : DELETE request with Invalid authentication key //
 	// deleteBlankAuthentication : DELETE request with Blank authentication key     //
-	// deleteNoAuthentication : DELETE request with No authentication               //
 	// deleteInvalidSubscription : DELETE request with Invalid subscription key     //
 	// deleteBlankSubscription : DELETE request with Blank subscription key         //
 	// deleteNoSubscription : DELETE request with No subscription key               //
 	
 	// putInvalidAuthentication : PUT request with Invalid authentication key   //
 	// putBlankAuthentication : PUT request with Blank authentication key       //
-	// putNoAuthentication : PUT request with No authentication                 //
 	// putInvalidSubscription : PUT request with Invalid subscription key       //
 	// putBlankSubscription : PUT request with Blank subscription key           //
 	// putNoSubscription : PUT request with No subscription key                 //
 	
 	// patchInvalidAuthentication : PATCH request with Invalid authentication key   //
 	// patchBlankAuthentication : PATCH request with Blank authentication key       //
-	// patchNoAuthentication : PATCH request with No authentication                 //
 	// patchInvalidSubscription : PATCH request with Invalid subscription key       //
 	// patchBlankSubscription : PATCH request with Blank subscription key           //
 	// patchNoSubscription : PATCH request with No subscription key                 //
@@ -187,9 +182,8 @@ public class ParameterizedApiRequests {
 	public static ExtractableResponse<?> apiHelper(String selector, String path) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Class<? extends ApiCallHelper> reflectObj = ApiHelpObj.getClass();
 		try {
-			System.out.println(selector);
 			Method methodCall = reflectObj.getDeclaredMethod(selector, String.class);
-			genericInvalidResponse = (ExtractableResponse<?>) methodCall.invoke(reflectObj, path);
+			genericInvalidResponse = (ExtractableResponse<?>) methodCall.invoke(reflectObj, path);	
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
 		}
@@ -205,7 +199,7 @@ public class ParameterizedApiRequests {
 	public static ExtractableResponse<?> apiHelper(String selector, String path, String body) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Class<? extends ApiCallHelper> reflectObj = ApiHelpObj.getClass();
 		try {
-			Method methodCall = reflectObj.getDeclaredMethod(selector);
+			Method methodCall = reflectObj.getDeclaredMethod(selector, String.class, String.class);
 			genericInvalidResponse = (ExtractableResponse<?>) methodCall.invoke(reflectObj, path, body);
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
@@ -223,7 +217,7 @@ public class ParameterizedApiRequests {
 	public static ExtractableResponse<?> apiHelper(String selector, String path, String body, String id) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Class<? extends ApiCallHelper> reflectObj = ApiHelpObj.getClass();
 		try {
-			Method methodCall = reflectObj.getDeclaredMethod(selector, String.class);
+			Method methodCall = reflectObj.getDeclaredMethod(selector, String.class, String.class, String.class, String.class);
 			genericInvalidResponse = (ExtractableResponse<?>) methodCall.invoke(reflectObj, path, body, id);
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();

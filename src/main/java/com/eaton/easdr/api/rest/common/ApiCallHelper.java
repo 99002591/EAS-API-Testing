@@ -42,7 +42,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> post(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> post(String pathParam, String body, String id) {
         return getHeader().body(body).when().post(pathParam + id).then().log().all().extract();
     }
     
@@ -58,7 +58,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> put(String pathParam, Object body) {
+    public static ExtractableResponse<?> put(String pathParam, String body) {
         return getHeader().body(body).put(pathParam).then().log().all().extract();
     }
 
@@ -66,11 +66,11 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> patch(String pathParam, Object body) {
+    public static ExtractableResponse<?> patch(String pathParam, String body) {
         return getHeader().body(body).when().patch(pathParam).then().log().all().extract();
     }
     
-    public static ExtractableResponse<?> patch(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> patch(String pathParam, String body, String id) {
         return getHeader().body(body).when().patch(pathParam + id).then().log().all().extract();
     }    
     // --------------------------------------------------------------------------------- //
@@ -93,7 +93,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postInvalidAuthentication(String pathParam, Object body) {
+    public static ExtractableResponse<?> postInvalidAuthentication(String pathParam, String body) {
         return getHeaderInvalidAuthentication().body(body).when().post(pathParam).then().log().all().extract();
     }
     
@@ -101,7 +101,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postInvalidAuthentication(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> postInvalidAuthentication(String pathParam, String body, String id) {
         return getHeaderInvalidAuthentication().body(body).when().post(pathParam + id).then().log().all().extract();
     }
     
@@ -117,7 +117,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> putInvalidAuthentication(String pathParam, Object body) {
+    public static ExtractableResponse<?> putInvalidAuthentication(String pathParam, String body) {
         return getHeaderInvalidAuthentication().body(body).put(pathParam).then().log().all().extract();
     }
 
@@ -125,11 +125,11 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> patchInvalidAuthentication(String pathParam, Object body) {
+    public static ExtractableResponse<?> patchInvalidAuthentication(String pathParam, String body) {
         return getHeaderInvalidAuthentication().body(body).when().patch(pathParam).then().log().all().extract();
     }
     
-    public static ExtractableResponse<?> patchInvalidAuthentication(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> patchInvalidAuthentication(String pathParam, String body, String id) {
         return getHeaderInvalidAuthentication().body(body).when().patch(pathParam + id).then().log().all().extract();
     }        
     // --------------------------------------------------------------------------------- //
@@ -152,7 +152,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postBlankAuthentication(String pathParam, Object body) {
+    public static ExtractableResponse<?> postBlankAuthentication(String pathParam, String body) {
         return getHeaderBlankAuthentication().body(body).when().post(pathParam).then().log().all().extract();
     }
     
@@ -160,7 +160,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postBlankAuthentication(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> postBlankAuthentication(String pathParam, String body, String id) {
         return getHeaderBlankAuthentication().body(body).when().post(pathParam + id).then().log().all().extract();
     }
     
@@ -176,7 +176,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> putBlankAuthentication(String pathParam, Object body) {
+    public static ExtractableResponse<?> putBlankAuthentication(String pathParam, String body) {
         return getHeaderBlankAuthentication().body(body).put(pathParam).then().log().all().extract();
     }
 
@@ -184,77 +184,19 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> patchBlankAuthentication(String pathParam, Object body) {
+    public static ExtractableResponse<?> patchBlankAuthentication(String pathParam, String body) {
         return getHeaderBlankAuthentication().body(body).when().patch(pathParam).then().log().all().extract();
     }
     
-    public static ExtractableResponse<?> patchBlankAuthentication(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> patchBlankAuthentication(String pathParam, String body, String id) {
         return getHeaderBlankAuthentication().body(body).when().patch(pathParam + id).then().log().all().extract();
     }        
     // --------------------------------------------------------------------------------- //
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
     
+       
     
     // 4.******************************************************************************* //
-    // *********************   API CALLS WITH NO AUTHENTICATION  *********************** //
-    // ********************************************************************************* //
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP GET method for specified URI
-     * and request parameter.
-     * 
-     */
-    public static ExtractableResponse<?> getNoAuthentication(String pathParam) {
-        return getHeaderNoAuthentication().get(pathParam).then().log().all().extract();
-    }
-    
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> postNoAuthentication(String pathParam, Object body) {
-        return getHeaderNoAuthentication().body(body).when().post(pathParam).then().log().all().extract();
-    }
-    
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> postNoAuthentication(String pathParam, Object body, String id) {
-        return getHeaderNoAuthentication().body(body).when().post(pathParam + id).then().log().all().extract();
-    }
-    
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP DELETE method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> deleteNoAuthentication(String pathParam) {
-        return getHeaderNoAuthentication().delete(pathParam).then().log().all().extract();
-    }
-
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> putNoAuthentication(String pathParam, Object body) {
-        return getHeaderNoAuthentication().body(body).put(pathParam).then().log().all().extract();
-    }
-
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> patchNoAuthentication(String pathParam, Object body) {
-        return getHeaderNoAuthentication().body(body).when().patch(pathParam).then().log().all().extract();
-    }
-    
-    public static ExtractableResponse<?> patchNoAuthentication(String pathParam, Object body, String id) {
-        return getHeaderNoAuthentication().body(body).when().patch(pathParam + id).then().log().all().extract();
-    }        
-    // --------------------------------------------------------------------------------- //
-    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
-    
-    
-    // 5.******************************************************************************* //
     // ****************  API CALLS WITH INCORRECT SUBSCRIPTION KEY  ******************** //
     // ********************************************************************************* //
     /**
@@ -270,7 +212,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postInvalidSubscription(String pathParam, Object body) {
+    public static ExtractableResponse<?> postInvalidSubscription(String pathParam, String body) {
         return getHeaderInvalidSubscription().body(body).when().post(pathParam).then().log().all().extract();
     }
     
@@ -278,7 +220,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postInvalidSubscription(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> postInvalidSubscription(String pathParam, String body, String id) {
         return getHeaderInvalidSubscription().body(body).when().post(pathParam + id).then().log().all().extract();
     }
     
@@ -294,7 +236,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> putInvalidSubscription(String pathParam, Object body) {
+    public static ExtractableResponse<?> putInvalidSubscription(String pathParam, String body) {
         return getHeaderInvalidSubscription().body(body).put(pathParam).then().log().all().extract();
     }
 
@@ -302,18 +244,18 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> patchInvalidSubscription(String pathParam, Object body) {
+    public static ExtractableResponse<?> patchInvalidSubscription(String pathParam, String body) {
         return getHeaderInvalidSubscription().body(body).when().patch(pathParam).then().log().all().extract();
     }
     
-    public static ExtractableResponse<?> patchInvalidSubscription(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> patchInvalidSubscription(String pathParam, String body, String id) {
         return getHeaderInvalidSubscription().body(body).when().patch(pathParam + id).then().log().all().extract();
     }        
     // --------------------------------------------------------------------------------- //
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
     
     
-    // 6.******************************************************************************* //
+    // 5.******************************************************************************* //
     // *****************   API CALLS WITH BLANK SUBSCRIPTION KEY   ********************* //
     // ********************************************************************************* //
     /**
@@ -329,7 +271,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postBlankSubscription(String pathParam, Object body) {
+    public static ExtractableResponse<?> postBlankSubscription(String pathParam, String body) {
         return getHeaderBlankSubscription().body(body).when().post(pathParam).then().log().all().extract();
     }
     
@@ -337,7 +279,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> postBlankSubscription(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> postBlankSubscription(String pathParam, String body, String id) {
         return getHeaderBlankSubscription().body(body).when().post(pathParam + id).then().log().all().extract();
     }
     
@@ -353,7 +295,7 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> putBlankSubscription(String pathParam, Object body) {
+    public static ExtractableResponse<?> putBlankSubscription(String pathParam, String body) {
         return getHeaderBlankSubscription().body(body).put(pathParam).then().log().all().extract();
     }
 
@@ -361,71 +303,12 @@ public class ApiCallHelper {
      * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
      * and request parameter.
      */
-    public static ExtractableResponse<?> patchBlankSubscription(String pathParam, Object body) {
+    public static ExtractableResponse<?> patchBlankSubscription(String pathParam, String body) {
         return getHeaderBlankSubscription().body(body).when().patch(pathParam).then().log().all().extract();
     }
     
-    public static ExtractableResponse<?> patchBlankSubscription(String pathParam, Object body, String id) {
+    public static ExtractableResponse<?> patchBlankSubscription(String pathParam, String body, String id) {
         return getHeaderBlankSubscription().body(body).when().patch(pathParam + id).then().log().all().extract();
-    }        
-    // --------------------------------------------------------------------------------- //
-    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
-    
-    
-    // 7.******************************************************************************* //
-    // **********************    API CALLS WITH NO SUBSCRIPTION KEY    ***************** //
-    // ********************************************************************************* //
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP GET method for specified URI
-     * and request parameter.
-     * 
-     */
-    public static ExtractableResponse<?> getNoSubscription(String pathParam) {
-        return getHeaderNoSubscription().get(pathParam).then().log().all().extract();
-    }
-    
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> postNoSubscription(String pathParam, Object body) {
-        return getHeaderNoSubscription().body(body).when().post(pathParam).then().log().all().extract();
-    }
-    
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP POST method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> postNoSubscription(String pathParam, Object body, String id) {
-        return getHeaderNoSubscription().body(body).when().post(pathParam + id).then().log().all().extract();
-    }
-    
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP DELETE method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> deleteNoSubscription(String pathParam) {
-        return getHeaderNoSubscription().delete(pathParam).then().log().all().extract();
-    }
-
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PUT method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> putNoSubscription(String pathParam, Object body) {
-        return getHeaderNoSubscription().body(body).put(pathParam).then().log().all().extract();
-    }
-
-    /**
-     * Returns <code>ExtractableResponse</code> by invoking corresponding HTTP PATCH method for specified URI
-     * and request parameter.
-     */
-    public static ExtractableResponse<?> patchNoSubscription(String pathParam, Object body) {
-        return getHeaderNoSubscription().body(body).when().patch(pathParam).then().log().all().extract();
-    }
-    
-    public static ExtractableResponse<?> patchNoSubscription(String pathParam, Object body, String id) {
-        return getHeaderNoSubscription().body(body).when().patch(pathParam + id).then().log().all().extract();
     }        
     // --------------------------------------------------------------------------------- //
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
@@ -447,7 +330,7 @@ public class ApiCallHelper {
      * @return The entire header sequence for a REST call
      */
     private static RequestSpecification getHeader() {
-        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN, "Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
+        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN).header("Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
     }    
  
     /**
@@ -455,7 +338,7 @@ public class ApiCallHelper {
      * @return The entire header sequence for a REST call
      */
     private static RequestSpecification getHeaderInvalidAuthentication() {
-        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + INVALID_AUTH_TOKEN, "Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
+        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + INVALID_AUTH_TOKEN).header("Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
     }   
     
     /**
@@ -463,23 +346,15 @@ public class ApiCallHelper {
      * @return The entire header sequence for a REST call
      */
     private static RequestSpecification getHeaderBlankAuthentication() {
-        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + BLANK_AUTH_TOKEN, "Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
+        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + BLANK_AUTH_TOKEN).header("Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
     }   
-    
-    /**
-     * Header management with No Authentication
-     * @return The entire header sequence for a REST call
-     */
-    private static RequestSpecification getHeaderNoAuthentication() {
-        return given().accept("application/json").contentType("application/json").header("Ocp-Apim-Subscription-Key", SUB_KEY).log().all();
-    }    
  
     /**
      * Header management with Incorrect Subscription Key
      * @return The entire header sequence for a REST call
      */
     private static RequestSpecification getHeaderInvalidSubscription() {
-        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN, "Ocp-Apim-Subscription-Key", INVALID_SUB_KEY).log().all();
+        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN).header("Ocp-Apim-Subscription-Key", INVALID_SUB_KEY).log().all();
     }   
     
     /**
@@ -487,14 +362,6 @@ public class ApiCallHelper {
      * @return The entire header sequence for a REST call
      */
     private static RequestSpecification getHeaderBlankSubscription() {
-        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN, "Ocp-Apim-Subscription-Key", BLANK_SUB_KEY).log().all();
-    }  
-    
-    /**
-     * Header management with No Subscription Key
-     * @return The entire header sequence for a REST call
-     */
-    private static RequestSpecification getHeaderNoSubscription() {
-        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN).log().all();
+        return given().accept("application/json").contentType("application/json").header("Authorization", "Bearer " + AUTH_TOKEN).header("Ocp-Apim-Subscription-Key", BLANK_SUB_KEY).log().all();
     }   
 }

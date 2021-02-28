@@ -2,6 +2,8 @@ package com.eaton.easdr.api.tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.lang.reflect.InvocationTargetException;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.json.JSONObject;
