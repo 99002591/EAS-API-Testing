@@ -67,7 +67,7 @@ public class ParameterizedApiRequests {
 	 * @param body : the payload for the API as JSON object
 	 * @return Extractable Api Response
 	 */
-	public static ExtractableResponse<?> putWithPathAndBody(String path, JSONObject body){
+	public static ExtractableResponse<?> putWithPathAndBody(String path, String body){
 		return ApiCallHelper.put(path, body);
 	}
 	
@@ -92,7 +92,7 @@ public class ParameterizedApiRequests {
 	 * @param id : incase the API has an ID pararmeter in URI
 	 * @return Extractable Api Response
 	 */
-	public static ExtractableResponse<?> patchwithPathParamAndBody(String path, JSONObject body, String id){
+	public static ExtractableResponse<?> patchwithPathParamAndBody(String path, String body, String id){
 		return ApiCallHelper.patch(path, body, id);
 		}
 	
@@ -101,7 +101,7 @@ public class ParameterizedApiRequests {
 	 * @param body : the payload for the API as JSON Object
 	 * @return Extractable Api Response
 	 */
-	public static ExtractableResponse<?> patchWithPathAndBody(String path, JSONObject body){
+	public static ExtractableResponse<?> patchWithPathAndBody(String path, String body){
 		return ApiCallHelper.patch(path, body);
 	}
 	

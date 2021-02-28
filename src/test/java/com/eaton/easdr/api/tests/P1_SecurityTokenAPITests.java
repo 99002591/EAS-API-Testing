@@ -2,8 +2,6 @@ package com.eaton.easdr.api.tests;
 
 import static org.testng.Assert.assertEquals;
 
-import java.lang.reflect.InvocationTargetException;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.json.JSONObject;
@@ -34,7 +32,7 @@ public class P1_SecurityTokenAPITests {
 				.setServiceAccountId(SecurityAccountToken.getServiceAcctID())
 				.setSecret(SecurityAccountToken.getSecret()).build();
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
-		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.Ok.getValue());
+		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
 		assertEquals(response.statusLine(), ALL_OK_LINE);
 	}
 
