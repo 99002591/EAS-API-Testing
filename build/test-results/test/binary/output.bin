@@ -16,7 +16,7 @@
 3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
 }
 HTTP/1.1 200 OK
-Content-Length: 1252
+Transfer-Encoding: chunked
 .Content-Type: application/json; charset=utf-8
 Content-Encoding: gzip
 Vary: Accept-Encoding
@@ -24,52 +24,40 @@
 ñSet-Cookie: ARRAffinity=b48bfe845cfd3b66d9bf580bf1413384753720d1863b4284ff56a23548de7534;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
 ùSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
 ≥Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
-$Date: Sun, 28 Feb 2021 08:58:59 GMT
+$Date: Sun, 28 Feb 2021 09:32:58 GMT
 
 {
-†	    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL2VhdG9uaW90YWRvcHRlcmFkYjJjLm9ubWljcm9zb2Z0LmNvbS9hZG9wdGVyd2ViYXBpc2VydmljZSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2IzY2ZkM2E1LTczMWItNDhlNy1hYTg1LTlhMGUwNTg3MDQ1My8iLCJpYXQiOjE2MTQ1MDI0MzksIm5iZiI6MTYxNDUwMjQzOSwiZXhwIjoxNjE0NTA2MzM5LCJhaW8iOiJFMlpnWUdoWTk5eko0THZnQ2JQN2V4aHFXMjAvQVFBPSIsImFwcGlkIjoiYTEwY2ZjNjQtMWI0Yy00NTgzLWFhMGUtYmE5NDcyMGNlODJjIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzLyIsInJoIjoiMC5BQUFBcGRQUHN4dHo1MGlxaFpvT0JZY0VVMlQ4REtGTUc0TkZxZzY2bEhJTTZDd1ZBQUEuIiwidGlkIjoiYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzIiwidXRpIjoia3VqZHlUMHZNRXkzU0ZjUE5LMUdBQSIsInZlciI6IjEuMCJ9.En0fSEOpCAbwPJuMxszF2AXcfAFBZzCykMBlypL_tV4T3GTvxih87Cvqa9SM2MKdWDHhGc6iQmTDtjj0WPy_c7oBRl7v7BL9H-nM1QacbrusUKGYUySgSV7ckrw3Mv7l_LS7wwkGAMkFr6M_GHEVicxUYaDblSFFnu6uE-procjRvV2cXKP07VaxdO2_spQtQkFA_pSpgXBonDMwhhsxpra5YJp1iemvIA6ZgL2tRzcOBECxowFK9BPI2Q_JBtn70wj6xbmWDwhl6ZCaIeJ4KJ3wgN7vuvsyPVpUu5UTBgvTz_zit8CSPfWTvjhTLiSlYryI19Xiu7xsE-aqJodvkg"
+†	    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL2VhdG9uaW90YWRvcHRlcmFkYjJjLm9ubWljcm9zb2Z0LmNvbS9hZG9wdGVyd2ViYXBpc2VydmljZSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2IzY2ZkM2E1LTczMWItNDhlNy1hYTg1LTlhMGUwNTg3MDQ1My8iLCJpYXQiOjE2MTQ1MDQ0NzgsIm5iZiI6MTYxNDUwNDQ3OCwiZXhwIjoxNjE0NTA4Mzc4LCJhaW8iOiJFMlpnWUpqQTF5OFhzZEw3b2FCTTMwYlBIbVlaQUE9PSIsImFwcGlkIjoiYTEwY2ZjNjQtMWI0Yy00NTgzLWFhMGUtYmE5NDcyMGNlODJjIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzLyIsInJoIjoiMC5BQUFBcGRQUHN4dHo1MGlxaFpvT0JZY0VVMlQ4REtGTUc0TkZxZzY2bEhJTTZDd1ZBQUEuIiwidGlkIjoiYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzIiwidXRpIjoibGxlSUlERVBxazJPbjdPeWo0SkZBQSIsInZlciI6IjEuMCJ9.MgMmMZNB7zjpounV73g1FW6VfG3-uQdMom3fVGtDHOSs9ZskfDMsRkDO0uhOUJbkInFVo3U9TObriqaYmcUz5FTGnOfa7YF6IaMTwJW64k0EJUzg-xP6Jpeewu9H5L9lJ-eoRE1Ev0Jvim5hbdEvYnXTqWfzZbFbeCi01GMpNPuS6VmxMiMiO7vJ82tcfOnlk1KB9x4lNPimv8VSJaTViFCtuBDAZ10__rd4piro7tO7VS1yPIZMTFg8hsZelgfrD36bbEVd9LPFz-O-nIyc02MxBDi6y7D55Mus70yCODm_FoliPJ_RV5uNE5mRJTDyIBOTY0xZurwVTddDMx1Low"
 }
-IN TRY BLOCK................
-7postInvalidAuthentication.............................
-+method call populated.....................
-Request method:	POST
-MRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-"Headers:		Accept=application/json
-<				Authorization=Bearer SomeRANdom12345AuthenticationToken
-,				Authorization=Ocp-Apim-Subscription-Key
-3				Authorization=8e665bf2ef41412285b164af82710525
-1				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-@    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce82c",
-3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
-}
-HTTP/1.1 400 Bad Request
-*Content-Type: text/html; charset=us-ascii
-$Date: Sun, 28 Feb 2021 08:59:01 GMT
-Connection: close
-Content-Length: 339
-
-<html>
-	  <head>
-    <title>Bad Request</title>
-L    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii"/>
-
-  </head>
-	  <body>
-*    <h2>Bad Request - Invalid Header</h2>
-
-    <hr/>
-C    <p>HTTP Error 400. The request has an invalid header name.</p>
-
-  </body>
-</html>
-4Generic Invalid response recieved..................
-EXIT TRY BLOCK................
+Request method:	POST
+MRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+"Headers:		Accept=application/json
+?				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+1				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+@    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce82c",
+3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
+}
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+.Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+CRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+ñSet-Cookie: ARRAffinity=b48bfe845cfd3b66d9bf580bf1413384753720d1863b4284ff56a23548de7534;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+ùSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+≥Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+$Date: Sun, 28 Feb 2021 09:33:00 GMT
+
+{
+†	    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL2VhdG9uaW90YWRvcHRlcmFkYjJjLm9ubWljcm9zb2Z0LmNvbS9hZG9wdGVyd2ViYXBpc2VydmljZSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2IzY2ZkM2E1LTczMWItNDhlNy1hYTg1LTlhMGUwNTg3MDQ1My8iLCJpYXQiOjE2MTQ1MDQ0ODEsIm5iZiI6MTYxNDUwNDQ4MSwiZXhwIjoxNjE0NTA4MzgxLCJhaW8iOiJFMlpnWU5pNE5mVmtwdzdUcFlTVC82YjBoaGI5QndBPSIsImFwcGlkIjoiYTEwY2ZjNjQtMWI0Yy00NTgzLWFhMGUtYmE5NDcyMGNlODJjIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzLyIsInJoIjoiMC5BQUFBcGRQUHN4dHo1MGlxaFpvT0JZY0VVMlQ4REtGTUc0TkZxZzY2bEhJTTZDd1ZBQUEuIiwidGlkIjoiYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzIiwidXRpIjoiSDZ5SFNxQUV6MG1yN2hYYTQtWklBQSIsInZlciI6IjEuMCJ9.k-2WMMJA5b6Q5UsLjBO5gEKpFUPRp9CWuGPpPACBJyJhpPWUPQCqVQWdkDNgsBXN6iq_4AZg4qyudy4UX1P7qYRtReuZsWf0ezhho5Zlx5xa5ZwTqI_uLQPVGAESL3VUgJVivkaEzdEcW-Dr7dmYgJrqySTCK7N59X0HsVafVRWJqxrpDWQbW-3TGe_txM7siwpxUNt0eOc1ZM5owgXlHK52KNN7ye5PkTuQ4ayU8rfyIS4MGPTRe6wMzEk5J-nBt52wfqPzYXABvFzvWKY2rFEnmVF4Y916A-dan3tiCaXtFRGqtxd5rAFFBSZhJe5AQcLnf9Hf4b3_2pqN5zXlrQ"
+}
+#++++++++++++++++++++++++++++++++++
