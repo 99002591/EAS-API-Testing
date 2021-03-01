@@ -19,15 +19,249 @@
 Content-Length: 124
 /Content-Type: application/json; charset=utf-8
 DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
-—Set-Cookie: ARRAffinity=6d0e841c812a12042bfc189586cddca7f7c86e17c1c20f55f99e79ab361fd998;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
 žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
 ´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
-%Date: Mon, 01 Mar 2021 08:35:57 GMT
+%Date: Mon, 01 Mar 2021 09:28:54 GMT
 
 {
     "errorCode": 401,
 p    "Message": "Authorization has been denied for this request. Invalid clientId and clientSecret combination."
 }
-+*****************************************
-401
-+*****************************************
+Request method:	POST
+NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+#Headers:		Accept=application/json
+@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "serviceAccountId": "",
+    "secret": ""
+}
+HTTP/1.1 400 Bad Request
+Content-Length: 195
+/Content-Type: application/json; charset=utf-8
+DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+%Date: Mon, 01 Mar 2021 09:28:57 GMT
+
+{
+    "InvalidParameters": [
+        "ClientId"
+    ],
+2    "Message": "The ClientId field is required.",
+7    "ErrorId": "5d087091-0f66-4585-bb35-c5ebd24ae68a",
+    "ErrorCode": 400,
+9    "GeneratedTime": "2021-03-01T09:28:57.4173635+00:00"
+}
+Request method:	POST
+NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+#Headers:		Accept=application/json
+@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "serviceAccountId": "",
+3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
+}
+HTTP/1.1 400 Bad Request
+Content-Length: 195
+/Content-Type: application/json; charset=utf-8
+DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+%Date: Mon, 01 Mar 2021 09:28:58 GMT
+
+{
+    "InvalidParameters": [
+        "ClientId"
+    ],
+2    "Message": "The ClientId field is required.",
+7    "ErrorId": "69853f2c-728f-43d5-8b75-62ffb7e60825",
+    "ErrorCode": 400,
+9    "GeneratedTime": "2021-03-01T09:28:58.7511434+00:00"
+}
+Request method:	POST
+NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+#Headers:		Accept=application/json
+@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+@    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce82c",
+    "secret": ""
+}
+HTTP/1.1 400 Bad Request
+Content-Length: 196
+/Content-Type: application/json; charset=utf-8
+DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+%Date: Mon, 01 Mar 2021 09:29:00 GMT
+
+{
+    "InvalidParameters": [
+        "ClientSecret"
+    ],
+/    "Message": "The secret field is required",
+7    "ErrorId": "ffd2913a-bac7-4ad2-bc95-b4a5d43554b6",
+    "ErrorCode": 400,
+9    "GeneratedTime": "2021-03-01T09:29:00.0226275+00:00"
+}
+Request method:	POST
+NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+#Headers:		Accept=application/json
+@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+9    "serviceAccountId": "a10cfewe-1b4c-4583-aa0e-ba947",
+    "secret": ""
+}
+HTTP/1.1 400 Bad Request
+Content-Length: 204
+/Content-Type: application/json; charset=utf-8
+DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+%Date: Mon, 01 Mar 2021 09:29:01 GMT
+
+{
+    "InvalidParameters": [
+        "ClientId"
+    ],
+<    "Message": "The field 'ClientId' is not a valid uuid.",
+7    "ErrorId": "05631fc6-9926-4e40-9eb2-2640ee5fad38",
+    "ErrorCode": 400,
+8    "GeneratedTime": "2021-03-01T09:29:01.413154+00:00"
+}
+k{"serviceAccountId":"a10cfc64-1b4c-4583-aa0e-ba94720ce81E","secret":"IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdGvG"}
+Request method:	POST
+NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+#Headers:		Accept=application/json
+@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+@    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce81E",
+3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdGvG"
+}
+HTTP/1.1 404 Not Found
+Content-Length: 230
+/Content-Type: application/json; charset=utf-8
+DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+%Date: Mon, 01 Mar 2021 09:29:02 GMT
+
+{
+v    "Message": "Service account a10cfc64-1b4c-4583-aa0e-ba94720ce81E not found in Mongo for environment ADOPTER1001",
+7    "ErrorId": "9192c679-2d4e-475c-b977-74a77417536b",
+    "ErrorCode": 404,
+9    "GeneratedTime": "2021-03-01T09:29:02.7519186+00:00"
+}
+k{"serviceAccountId":"a10cfc64-1b4c-4583-aa0e-ba94720ce81E","secret":"IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"}
+Request method:	POST
+NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+#Headers:		Accept=application/json
+@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+@    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce81E",
+3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
+}
+HTTP/1.1 404 Not Found
+Content-Length: 230
+/Content-Type: application/json; charset=utf-8
+DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+%Date: Mon, 01 Mar 2021 09:29:03 GMT
+
+{
+v    "Message": "Service account a10cfc64-1b4c-4583-aa0e-ba94720ce81E not found in Mongo for environment ADOPTER1001",
+7    "ErrorId": "c77ce43e-97a4-4d36-8997-cc52c9e9bc64",
+    "ErrorCode": 404,
+9    "GeneratedTime": "2021-03-01T09:29:04.0070538+00:00"
+}
+	Request method:	POST
+	NRequest URI:	https://eas-all-apim-eus-dev.azure-api.net/serviceAccount/token
+	Proxy:			<none>
+	Request params:	<none>
+	Query params:	<none>
+	Form params:	<none>
+	Path params:	<none>
+	#Headers:		Accept=application/json
+	@				Ocp-Apim-Subscription-Key=8e665bf2ef41412285b164af82710525
+	2				Content-Type=application/json; charset=UTF-8
+	Cookies:		<none>
+	Multiparts:		<none>
+	Body:
+	{
+	@    "serviceAccountId": "a10cfc64-1b4c-4583-aa0e-ba94720ce82c",
+	3    "secret": "IMxm39~n5-Os8d9Af3PP8yC-RLAm_SdFvF"
+	}
+	HTTP/1.1 200 OK
+	Transfer-Encoding: chunked
+	/Content-Type: application/json; charset=utf-8
+	Content-Encoding: gzip
+	Vary: Accept-Encoding
+	DRequest-Context: appId=cid-v1:648365df-e986-465f-bb15-487d53a8d2b5
+	—Set-Cookie: ARRAffinity=6f6091014319b7cec7ccca51303e373aa09d302990b514a139bd2122ca50b1a5;Path=/;HttpOnly;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+	žSet-Cookie: ARRAffinity=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+	´Set-Cookie: ARRAffinitySameSite=8528420ccde62e3f7e0853edb739a8d6354b7e2ef9fb495e896bc5189e88015e;Path=/;HttpOnly;SameSite=None;Secure;Domain=eas-sec-afx-eus-dev.azurewebsites.net
+	%Date: Mon, 01 Mar 2021 09:29:05 GMT
+	
+	{
+	 	    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL2VhdG9uaW90YWRvcHRlcmFkYjJjLm9ubWljcm9zb2Z0LmNvbS9hZG9wdGVyd2ViYXBpc2VydmljZSIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2IzY2ZkM2E1LTczMWItNDhlNy1hYTg1LTlhMGUwNTg3MDQ1My8iLCJpYXQiOjE2MTQ1OTA2NDUsIm5iZiI6MTYxNDU5MDY0NSwiZXhwIjoxNjE0NTk0NTQ1LCJhaW8iOiJFMlpnWUZodCtkRTF2TjZhWmRxTjdwdjJ1dHlGQUE9PSIsImFwcGlkIjoiYTEwY2ZjNjQtMWI0Yy00NTgzLWFhMGUtYmE5NDcyMGNlODJjIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzLyIsInJoIjoiMC5BQUFBcGRQUHN4dHo1MGlxaFpvT0JZY0VVMlQ4REtGTUc0TkZxZzY2bEhJTTZDd1ZBQUEuIiwidGlkIjoiYjNjZmQzYTUtNzMxYi00OGU3LWFhODUtOWEwZTA1ODcwNDUzIiwidXRpIjoid3V2T1JlUmsxVXVuZmtxMnNNNDNBQSIsInZlciI6IjEuMCJ9.BiMx6bpTBbsJUPlde065DrevriZo2rpnM-gYNa-t9IGVhr3wnMWmhMuUF_4Ovf8QMh8xz0dj3DBA0xyxyN4kYBxyyu4LINJxtYr4-ZfHvre-JHARj9fm3ILkkykKM5T5Q4omee25hk9ZI03CIHkEABX4x16WkMcrv6jGUbWLh2ym3Pj9cXBIBheYGbI9nDjGozfGMcDV6lvV4I-vKmrUAF8wCduOef3JhEDw8S2GC6RLV6re4HHhUBC7Bv_UeziM_DXIet20Vvu-j0-c5X9IZe66IWQWZNtZ193i5FL0QlLtVOoWaxaI4XWkknLaTuCvV4JlHOn-USl28juhzorzvw"
+	}
