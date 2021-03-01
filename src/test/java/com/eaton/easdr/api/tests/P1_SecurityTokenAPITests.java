@@ -1,8 +1,6 @@
 package com.eaton.easdr.api.tests;
 
 import static org.testng.Assert.assertEquals;
-import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.json.JSONObject;
