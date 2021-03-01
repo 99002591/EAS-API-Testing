@@ -1,6 +1,7 @@
 package com.eaton.easdr.api.tests;
 
 import static org.testng.Assert.assertEquals;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.json.JSONObject;
@@ -20,13 +21,6 @@ public class P1_SecurityTokenAPITests {
 	public static ExtractableResponse<?> response;
 	public static Assertion assertObj = new Assertion();
 
-	// ***** //
-	public static final String ALL_OK_LINE = "HTTP/1.1 200 OK";
-	public static final String NOT_FOUND_LINE = "HTTP/1.1 404 Not Found";
-	public static final String BAD_REQUEST_LINE = "HTTP/1.1 400 Bad Request";
-	public static final String UNAUTHORIZED_LINE = "HTTP/1.1 401 Unauthorized";
-	// ***** //
-
 	@Test(description = "Successfully login to generate Authentication token")
 	public static void api_P1_success() {
 		JSONObject request = new RequestBodyBuilder.Builder()
@@ -34,7 +28,7 @@ public class P1_SecurityTokenAPITests {
 				.setSecret(SecurityAccountToken.getSecret()).build();
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.Ok.getValue());
-		assertEquals(response.statusLine(), ALL_OK_LINE);
+		assertEquals(response.statusLine(), assertObj.ALL_OK_LINE);
 	}
 
 	@Test(description = "Invalid Service Account ID", dataProvider = "InvalidSecurityAcctTokenData", dataProviderClass = DataProviderClass.class)
@@ -43,7 +37,7 @@ public class P1_SecurityTokenAPITests {
 		System.out.println(request.toString());
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.NotFound.getValue());
-		assertEquals(response.statusLine(), NOT_FOUND_LINE);
+		assertEquals(response.statusLine(), assertObj.NOT_FOUND_LINE);
 		assertEquals(response.jsonPath().getString("ErrorCode"), APIs.StatusCode.NotFound.getValue().toString());
 		assertEquals(response.jsonPath().getString("Message"),assertObj.invalidAccount(request.getString("serviceAccountId")));
 	}
@@ -53,7 +47,7 @@ public class P1_SecurityTokenAPITests {
 		JSONObject request = new RequestBodyBuilder.Builder().setServiceAccountId(serviceActID).setSecret(secret).build();
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
-		assertEquals(response.statusLine(), BAD_REQUEST_LINE);
+		assertEquals(response.statusLine(), assertObj.BAD_REQUEST_LINE);
 		assertEquals(response.jsonPath().getString("Message"), assertObj.P1_BLANK_CLIENT);
 		assertEquals(response.jsonPath().getString("ErrorCode"), APIs.StatusCode.BadRequest.getValue().toString());
 		assertEquals(response.jsonPath().getString("'InvalidParameters'[0]"), "ClientId");
@@ -66,7 +60,7 @@ public class P1_SecurityTokenAPITests {
 				.setSecret(SecurityAccountToken.getInvalidSecret()).build();
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.Unauthorized.getValue());
-		assertEquals(response.statusLine(), UNAUTHORIZED_LINE);
+		assertEquals(response.statusLine(), assertObj.UNAUTHORIZED_LINE);
 		assertEquals(response.jsonPath().getString("errorCode"), APIs.StatusCode.Unauthorized.getValue().toString());
 		assertEquals(response.jsonPath().getString("Message"), assertObj.P1_INVALID_ID_SECRET_COMB);
 	}
@@ -75,10 +69,10 @@ public class P1_SecurityTokenAPITests {
 	public static void api_P1_blankSecret() {
 		JSONObject request = new RequestBodyBuilder.Builder()
 				.setServiceAccountId(SecurityAccountToken.getServiceAcctID())
-				.setSecret(SecurityAccountToken.getBlankSecret()).build();
+				.build();
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
-		assertEquals(response.statusLine(), BAD_REQUEST_LINE);
+		assertEquals(response.statusLine(), assertObj.BAD_REQUEST_LINE);
 		assertEquals(response.jsonPath().getString("Message"), assertObj.P1_BLANK_SECRET);
 		assertEquals(response.jsonPath().getString("ErrorCode"), APIs.StatusCode.BadRequest.getValue().toString());
 		assertEquals(response.jsonPath().getString("'InvalidParameters'[0]"), "ClientSecret");
@@ -88,10 +82,10 @@ public class P1_SecurityTokenAPITests {
 	public static void api_P1_invalidGUID() {
 		JSONObject request = new RequestBodyBuilder.Builder()
 				.setServiceAccountId(SecurityAccountToken.getInvalidServiceAcctID())
-				.setSecret(SecurityAccountToken.getBlankSecret()).build();
+				.build();
 		response = ParameterizedApiRequests.postToLogin(APIs.API_P1_SECURITY, request.toString());
 		assertThat(response.statusCode()).isEqualTo(APIs.StatusCode.BadRequest.getValue());
-		assertEquals(response.statusLine(), BAD_REQUEST_LINE);
+		assertEquals(response.statusLine(), assertObj.BAD_REQUEST_LINE);
 		assertEquals(response.jsonPath().getString("Message"), assertObj.P1_INVALID_UUID);
 		assertEquals(response.jsonPath().getString("ErrorCode"), APIs.StatusCode.BadRequest.getValue().toString());
 		assertEquals(response.jsonPath().getString("'InvalidParameters'[0]"), "ClientId");

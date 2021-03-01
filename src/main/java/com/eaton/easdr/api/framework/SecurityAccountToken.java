@@ -22,10 +22,6 @@ public class SecurityAccountToken {
 	public static String getInvalidSecret() {
 		return INAVLID_SECRET;
 	}
-
-	public static String getBlankSecret() {
-		return BLANK_SECRET;
-	}
 	
 	public static String getInvalidServiceAcctID() {
 		return INVALID_SERVICE_ACCT_ID;
