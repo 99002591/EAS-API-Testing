@@ -1,6 +1,6 @@
 package com.eaton.easdr.api.assertionStatements;
 
-public class assertionStatements {
+public class Assertion {
 
 		// ********************** P1 ASSERTIONS STATEMENTS ***************** //
 		// ***************************************************************** //
